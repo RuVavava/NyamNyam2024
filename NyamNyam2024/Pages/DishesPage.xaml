@@ -22,12 +22,17 @@
             <ColumnDefinition Width="810"/>
         </Grid.ColumnDefinitions>
 
+        <Border Background="#fdb249"
+                Grid.Column="0" Grid.ColumnSpan="3"
+                CornerRadius="0 0 60 0"/>
+
         <TextBlock Style="{StaticResource Headings}"
             Grid.Column="1" Grid.Row="0"
             Margin="40 0 0 0"
             VerticalAlignment="Center" HorizontalAlignment="Left">         
             List of Dishes
         </TextBlock>
+        
 
         <TextBlock Style="{StaticResource Text}"
             Grid.Column="1" Grid.Row="1" Grid.RowSpan="1"
@@ -110,7 +115,7 @@
                                     <LinearGradientBrush EndPoint="0,0.8" StartPoint="0,0.3">
                                         <GradientStop Color="White" Offset="0" />
                                         <GradientStop Color="LightGray" Offset="0.684" />
-                                        <GradientStop Color="LightGray" Offset="0.442" />
+                                        <GradientStop Color="LightGray" Offset="0.9" />
                                     </LinearGradientBrush>
                                 </StackPanel.Background>
 

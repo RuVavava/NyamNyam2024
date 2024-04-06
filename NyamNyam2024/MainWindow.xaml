@@ -20,29 +20,28 @@
             Grid.Row="0" Grid.RowSpan="6"
             HorizontalAlignment="Left"
             MinWidth="300" MaxWidth="500"
+            Height="1080" VerticalAlignment="Bottom"
             Background="#eed4fe"/>
 
+
         <StackPanel
-            Grid.Row="0" Grid.RowSpan="2"
-            Height="180" MaxHeight="200"
+            Height="452" MaxHeight="400"
             VerticalAlignment="Top"
-            Margin="30 20 0 0">
-            <TextBlock HorizontalAlignment="Left" Margin="0 0 0 20" >
+            Margin="22,19,0,0">
+
+            <Image Source="Images\logoheaders.PNG"
+               VerticalAlignment="Top" HorizontalAlignment="Left"
+               Width="260" Height="150" Margin="0 0 0 0"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="10 0 0 20" >
                 <Hyperlink Style="{StaticResource Hyperlinks}" Click="DishesHyperlink_Click"> Dishes </Hyperlink>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="0 0 0 20">
+            <TextBlock HorizontalAlignment="Left" Margin="10 0 0 20">
                 <Hyperlink Style="{StaticResource Hyperlinks}" Click="IngredientsHyperlink_Click"> Ingredients </Hyperlink>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="0 0 0 20">
+            <TextBlock HorizontalAlignment="Left" Margin="10 0 0 20">
                 <Hyperlink Style="{StaticResource Hyperlinks}" Click="OrdersHyperlink_Click"> Orders </Hyperlink>
             </TextBlock>
         </StackPanel>
-
-        <!--<Image Source="/Images/Logo.png"
-               Grid.Column="2" Grid.ColumnSpan="3"
-               Grid.Row="1" Grid.RowSpan="4"
-               MinWidth="100" MinHeight="100"
-               MaxWidth="700" MaxHeight="700"></Image>-->
-
     </Grid>
 </Window>
