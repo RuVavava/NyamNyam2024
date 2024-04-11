@@ -76,50 +76,50 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DB\Category.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Client.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\CookingStage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\DBConnection.cs" />
     <Compile Include="DB\Dish.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Ingredient.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\IngredientOfStage.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Model1.Context.cs">
+    <Compile Include="DB\Model3.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
+      <DependentUpon>Model3.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Model1.cs">
+    <Compile Include="DB\Model3.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DB\Model1.Designer.cs">
+    <Compile Include="DB\Model3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
+      <DependentUpon>Model3.edmx</DependentUpon>
     </Compile>
     <Compile Include="DB\Order.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\OrderedDish.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="DB\Unit.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+      <DependentUpon>Model3.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -165,12 +165,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\Model1.edmx">
+    <EntityDeploy Include="DB\Model3.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model3.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\Model1.edmx.diagram">
-      <DependentUpon>Model1.edmx</DependentUpon>
+    <None Include="DB\Model3.edmx.diagram">
+      <DependentUpon>Model3.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -185,16 +185,21 @@
     <Resource Include="LogoNyamNyam.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Content>
-    <Content Include="DB\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
+    <Resource Include="Images\1.jpg" />
+    <Resource Include="Images\10.jpeg" />
+    <Resource Include="Images\11.jpeg" />
+    <Resource Include="Images\12.jpeg" />
+    <Resource Include="Images\13.jpeg" />
+    <Resource Include="Images\14.jpeg" />
+    <Resource Include="Images\15.jpg" />
+    <Resource Include="Images\2.jpeg" />
+    <Resource Include="Images\3.jpg" />
+    <Resource Include="Images\4.jpeg" />
+    <Resource Include="Images\5.jpeg" />
+    <Resource Include="Images\6.jpeg" />
+    <Resource Include="Images\7.jpeg" />
+    <Resource Include="Images\8.jpeg" />
+    <Resource Include="Images\9.jpeg" />
     <Resource Include="Images\logoheaders.PNG" />
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +207,18 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Model3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model3.edmx</DependentUpon>
+      <LastGenOutput>Model3.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

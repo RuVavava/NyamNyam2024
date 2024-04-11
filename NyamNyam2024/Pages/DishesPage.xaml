@@ -103,39 +103,45 @@
             </ListView.ItemsPanel>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <Border BorderThickness="2" 
+                    <Border BorderThickness="2" 
                             BorderBrush="Gray" 
                             Margin="5" Padding="5" 
                             CornerRadius="2">
 
-                            <StackPanel Orientation="Vertical" 
+                        <StackPanel Orientation="Vertical" 
                                     Width="450" Height="325"                                   
                                     Cursor="Hand">
+                            <StackPanel.Background>
+                                <ImageBrush ImageSource="{Binding Path=Image}" Opacity="1"/>
+                            </StackPanel.Background>
+
+                            <StackPanel  Width="450" Height="100" Margin="0 175 0 0">
                                 <StackPanel.Background>
-                                    <LinearGradientBrush EndPoint="0,0.8" StartPoint="0,0.3">
-                                        <GradientStop Color="White" Offset="0" />
-                                        <GradientStop Color="LightGray" Offset="0.684" />
-                                        <GradientStop Color="LightGray" Offset="0.9" />
-                                    </LinearGradientBrush>
+                                    <SolidColorBrush Color="Black" Opacity="0.5"/>
                                 </StackPanel.Background>
 
-                                <Image Source="{Binding Image}" Width="120" Height="120" Margin="0 5 0 0"/>
-
-                                <StackPanel >
-                                    <TextBlock Text="{Binding Name}" 
+                                <TextBlock Text="{Binding Name}" Style="{StaticResource TextDishes}"
                                        TextWrapping="Wrap"
-                                       TextAlignment="Center" HorizontalAlignment="Center" />
+                                       TextAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
 
-                                <TextBlock 
+
+                            <StackPanel  Width="450" Height="50" Margin="0 0 0 0">
+                                <StackPanel.Background>
+                                    <SolidColorBrush Color="Black" Opacity="0.5"/>
+                                </StackPanel.Background>
+                                <TextBlock Style="{StaticResource TextDishes}"
                                       TextWrapping="Wrap"
-                                      Margin="0 15 0 0"
+
                                       TextAlignment="Center"
                                       HorizontalAlignment="Center">
-                                     <TextBlock Text="1 portion = "/>
-                                     <TextBlock Text="{Binding FinalPriceInCents}" />
-                                     <TextBlock Text="$"/>
+                                     <TextBlock Style="{StaticResource TextDishes}" Text="1 portion = "/>
+                                     <TextBlock Style="{StaticResource TextDishes}" Text="{Binding FinalPriceInCents}"/>
+                                     <TextBlock Style="{StaticResource TextDishes}" Text="$"/>
                                 </TextBlock>
                             </StackPanel>
+                            
+                            
                         </StackPanel>
                     </Border>
                 </DataTemplate>

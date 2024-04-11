@@ -24,6 +24,12 @@
             <Setter Property="Foreground" Value="Black"/>
         </Style>
 
+        <Style x:Key="TextDishes" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
         <Style x:Key="Combobox" TargetType="ComboBox">
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
             <Setter Property="FontSize" Value="35"/>
