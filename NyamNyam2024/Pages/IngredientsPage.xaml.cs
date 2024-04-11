@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NyamNyam2024.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace NyamNyam2024.Pages
     /// </summary>
     public partial class IngredientsPage : Page
     {
+        public static List<Dish> dishes { get; set; }
         public IngredientsPage()
         {
             InitializeComponent();
+            dishes = new List<Dish>(DBConnection.nnEntities.Dish.ToList());
+            this.DataContext = this;
         }
     }
 }

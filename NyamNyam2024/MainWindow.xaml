@@ -22,7 +22,7 @@
             MinWidth="300" MaxWidth="500"
             Height="1080" VerticalAlignment="Bottom"
             Background="#eed4fe"/>
-
+      
 
         <StackPanel
             Height="452" MaxHeight="400"
@@ -32,6 +32,8 @@
             <Image Source="Images\logoheaders.PNG"
                VerticalAlignment="Top" HorizontalAlignment="Left"
                Width="260" Height="150" Margin="0 0 0 0"/>
+
+
 
             <TextBlock HorizontalAlignment="Left" Margin="10 0 0 20" >
                 <Hyperlink Style="{StaticResource Hyperlinks}" Click="DishesHyperlink_Click"> Dishes </Hyperlink>
