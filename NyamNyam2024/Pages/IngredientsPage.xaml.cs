@@ -21,11 +21,11 @@ namespace NyamNyam2024.Pages
     /// </summary>
     public partial class IngredientsPage : Page
     {
-        public static List<Dish> dishes { get; set; }
+        public static List<Ingredient> ingr { get; set; }
         public IngredientsPage()
         {
             InitializeComponent();
-            dishes = new List<Dish>(DBConnection.nnEntities.Dish.ToList());
+            ingr = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
             this.DataContext = this;
         }
     }

@@ -30,6 +30,7 @@
             <Setter Property="Foreground" Value="White"/>
         </Style>
 
+
         <Style x:Key="Combobox" TargetType="ComboBox">
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
             <Setter Property="FontSize" Value="35"/>

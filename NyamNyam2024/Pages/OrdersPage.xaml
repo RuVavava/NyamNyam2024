@@ -10,5 +10,70 @@
 
     <Grid>
 
+
+        <StackPanel Orientation="Vertical" 
+                Width="710" Height="110"                                   
+                Cursor="Hand" Background="AliceBlue">
+
+            <StackPanel >
+                <TextBlock Style="{StaticResource Text}"
+                           Margin="20 5 0 0"
+                           FontWeight="Bold"
+                           FontSize="25"
+                           TextWrapping="Wrap"
+                           TextAlignment="Left"
+                           HorizontalAlignment="Left"
+                           Text="Name of INGR"/>
+
+                <TextBlock Style="{StaticResource Text}"
+                            TextWrapping="Wrap"
+                           FontSize="20"
+                            Margin="20 5 0 0"
+                            TextAlignment="Left"
+                            HorizontalAlignment="Left">
+                            <TextBlock Text="Price:"/>
+                            <TextBlock Text="{Binding CostInCents}" />
+                            <TextBlock Text="$"/>                                 
+                </TextBlock>
+
+                <TextBlock Style="{StaticResource Text}"
+                           FontSize="17"
+                                       Margin="20 5 0 8"
+                          
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Left"
+                                       HorizontalAlignment="Left">
+                                    <Hyperlink Foreground="#FF0000">
+                                        Delete
+                                    </Hyperlink>
+                </TextBlock>
+
+                <TextBox x:Name="countIngredientTbx"   Style="{StaticResource ResourceKey=TextBox}"   FontSize="25"                           
+                            Text="{Binding AvailableCount}" VerticalAlignment="Center" HorizontalContentAlignment="Center"
+                         Width="50" Height="40" Margin="270 -100 0 0"/>
+
+
+
+                <TextBlock Style="{StaticResource Text}" HorizontalAlignment="Left" FontSize="25"
+                                         VerticalAlignment="Center" Margin="520 -100 0 0"
+                                         Text="unit">                              
+                                </TextBlock>
+
+                <Button
+                        Width="35" Height="37" Content="+" HorizontalAlignment="Right" VerticalContentAlignment="Top" HorizontalContentAlignment="Center"
+                    FontFamily="Comic Sans MS" FontSize="25"
+                        Margin="0 -160 10 0"
+                                />
+
+
+                <Button
+                        Width="35" Height="37" Content="-" HorizontalAlignment="Right" VerticalContentAlignment="Top" HorizontalContentAlignment="Center"
+                    FontFamily="Comic Sans MS" FontSize="25"
+                        Margin="0 -60 10 0"
+                                />
+            </StackPanel>
+        </StackPanel>
+
+
     </Grid>
 </Page>
