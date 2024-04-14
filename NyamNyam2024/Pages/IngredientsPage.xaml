@@ -85,7 +85,7 @@
                             TextAlignment="Left"
                             HorizontalAlignment="Left">
                             <TextBlock Text="Price:"/>
-                            <TextBlock Text="{Binding CostInCents}" />
+                            <TextBlock Text="{Binding CostInDollar}" />
                             <TextBlock Text="$"/>                                 
                 </TextBlock>
 

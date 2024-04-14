@@ -13,10 +13,10 @@ namespace NyamNyam2024.DB
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NyamNyamEntities : DbContext
+    public partial class NyamNyamEntities1 : DbContext
     {
-        public NyamNyamEntities()
-            : base("name=NyamNyamEntities")
+        public NyamNyamEntities1()
+            : base("name=NyamNyamEntities1")
         {
         }
     

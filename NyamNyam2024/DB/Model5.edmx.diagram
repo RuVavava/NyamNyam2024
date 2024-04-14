@@ -4,11 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e961049dc8bc4841959a12017ebbebd0" Name="Diagram1">
+      <Diagram DiagramId="0735ff13ef3c4a69bac73b984d4afcee" Name="Diagram1">
         <EntityTypeShape EntityType="NyamNyamModel.Category" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="NyamNyamModel.Client" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NyamNyamModel.CookingStage" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="NyamNyamModel.Dish" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NyamNyamModel.Dish" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
         <EntityTypeShape EntityType="NyamNyamModel.Ingredient" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="NyamNyamModel.IngredientOfStage" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="NyamNyamModel.Order" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />

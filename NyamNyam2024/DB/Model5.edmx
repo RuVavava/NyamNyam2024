@@ -42,6 +42,7 @@
           <Property Name="RecipeLink" Type="nvarchar" MaxLength="200" />
           <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="FinalPriceInCents" Type="int" Nullable="false" />
+          <Property Name="Availble" Type="bit" />
         </EntityType>
         <EntityType Name="Ingredient">
           <Key>
@@ -287,6 +288,7 @@
           <Property Name="RecipeLink" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="FinalPriceInCents" Type="Int32" Nullable="false" />
+          <Property Name="Availble" Type="Boolean" />
           <NavigationProperty Name="Category" Relationship="Self.FK_Dish_Category" FromRole="Dish" ToRole="Category" />
           <NavigationProperty Name="CookingStage" Relationship="Self.FK_CookingStage_Dish1" FromRole="Dish" ToRole="CookingStage" />
           <NavigationProperty Name="OrderedDish" Relationship="Self.FK_OrderedDish_Dish" FromRole="Dish" ToRole="OrderedDish" />
@@ -454,7 +456,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="NyamNyamEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="NyamNyamEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Category" EntityType="Self.Category" />
           <EntitySet Name="Client" EntityType="Self.Client" />
           <EntitySet Name="CookingStage" EntityType="Self.CookingStage" />
@@ -503,7 +505,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище NyamNyamModelContainer" CdmEntityContainer="NyamNyamEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище NyamNyamModelContainer" CdmEntityContainer="NyamNyamEntities1">
           <EntitySetMapping Name="Category">
             <EntityTypeMapping TypeName="NyamNyamModel.Category">
               <MappingFragment StoreEntitySet="Category">
@@ -543,6 +545,7 @@
                 <ScalarProperty Name="RecipeLink" ColumnName="RecipeLink" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="FinalPriceInCents" ColumnName="FinalPriceInCents" />
+                <ScalarProperty Name="Availble" ColumnName="Availble" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
