@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace NyamNyam2024.Pages
 {
     /// <summary>
@@ -26,6 +27,7 @@ namespace NyamNyam2024.Pages
         {
             InitializeComponent();
             ingridients = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
+
             Refresh();
 
             this.DataContext = this;
@@ -40,7 +42,6 @@ namespace NyamNyam2024.Pages
             ingridient.AvailableCount += 1;
             DBConnection.nnEntities.SaveChanges();
             Refresh();
-            NavigationService.Navigate(new IngredientsPage());
         }
 
         private void MinusBTN_Click(object sender, RoutedEventArgs e)
@@ -52,17 +53,43 @@ namespace NyamNyam2024.Pages
             ingridient.AvailableCount -= 1;
             DBConnection.nnEntities.SaveChanges();
             Refresh();
-            NavigationService.Navigate(new IngredientsPage());
         }
 
         private void Refresh()
         {
+            var s = DB.DBConnection.nnEntities.TotalSummIngridientsPr();
+            int totalSummIngridients = (int)s.Sum();
+            totalcostTBL.Text = $"{totalSummIngridients * 0.01} $";
+
             ingridientsLV.ItemsSource = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
         }
 
         private void countIngredientTbx_TextChanged(object sender, TextChangedEventArgs e)
         {
             DBConnection.nnEntities.SaveChanges();
+        }
+
+        private void DeleteIndredientHL_Click(object sender, RoutedEventArgs e)
+        {
+            if(sender is Hyperlink hyperlink && hyperlink.DataContext is Ingredient ingredient)
+            {
+                var findIngredienWhichInDishes = DBConnection.nnEntities.FindIngredienWhichInDishes();
+                List<FindIngredienWhichInDishes_Result> cantRemoveIngridient = findIngredienWhichInDishes.ToList();
+                
+
+                var ingr = cantRemoveIngridient.Find(x => x.Id == ingredient.Id);
+
+                if (ingr == null)
+                {                    
+                    DBConnection.nnEntities.Ingredient.Remove(ingredient);
+                    DBConnection.nnEntities.SaveChanges();
+                    MessageBox.Show($"The removal was successful!");
+
+                    Refresh();
+                }
+                else
+                    MessageBox.Show($"Removal is not possible. {ingr.Name} uise in {ingr.Count} dishes") ;
+            }
         }
     }
 }

@@ -36,14 +36,14 @@
 
         <TextBlock Style="{StaticResource Text}"
             Grid.Column="2" Grid.Row="1"
-            Margin="0 0 0 0" FontSize="33"
+            Margin="0 0 0 0" FontSize="30"
             VerticalAlignment="Center" HorizontalAlignment="Left">         
             Total available ingredients for the amount ($):
         </TextBlock>
 
         <TextBlock Style="{StaticResource Text}" x:Name="totalcostTBL"
             Grid.Column="2" Grid.Row="1"
-            Margin="0 0 5 0" FontSize="33"
+            Margin="0 0 5 0" FontSize="30"
             VerticalAlignment="Center" HorizontalAlignment="Right"/>
 
         <ListView x:Name="ingridientsLV" 
@@ -90,7 +90,7 @@
                                     Margin="20 5 0 8"
                                     TextWrapping="Wrap"
                                     TextAlignment="Left" HorizontalAlignment="Left">
-                                    <Hyperlink Foreground="#FF0000">
+                                    <Hyperlink Foreground="#FF0000" x:Name="DeleteIndredientHL" Click="DeleteIndredientHL_Click">
                                         Delete
                                     </Hyperlink>
                                 </TextBlock>

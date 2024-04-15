@@ -15,10 +15,10 @@ namespace NyamNyam2024.DB
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class NyamNyamEntities2 : DbContext
+    public partial class NyamNyamEntities : DbContext
     {
-        public NyamNyamEntities2()
-            : base("name=NyamNyamEntities2")
+        public NyamNyamEntities()
+            : base("name=NyamNyamEntities")
         {
         }
     
@@ -139,6 +139,16 @@ namespace NyamNyam2024.DB
         public virtual int sp_upgraddiagrams()
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
+    
+        public virtual ObjectResult<Nullable<double>> TotalSummIngridientsPr()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<double>>("TotalSummIngridientsPr");
+        }
+    
+        public virtual ObjectResult<FindIngredienWhichInDishes_Result> FindIngredienWhichInDishes()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<FindIngredienWhichInDishes_Result>("FindIngredienWhichInDishes");
         }
     }
 }
