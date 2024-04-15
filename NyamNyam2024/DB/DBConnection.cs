@@ -8,6 +8,6 @@ namespace NyamNyam2024.DB
 {
     internal class DBConnection
     {
-        public static NyamNyamEntities1 nnEntities = new NyamNyamEntities1();
+        public static NyamNyamEntities2 nnEntities = new NyamNyamEntities2();
     }
 }

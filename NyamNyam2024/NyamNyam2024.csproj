@@ -67,6 +67,57 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DB\Category.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Client.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\CookingStage.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Dish.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Ingredient.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\IngredientOfStage.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model6.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model6.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model6.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Model6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model6.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Order.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\OrderedDish.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\sysdiagrams.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Unit.cs">
+      <DependentUpon>Model6.tt</DependentUpon>
+    </Compile>
     <Compile Include="Service\CheckAvailbleOfDish.cs" />
     <Compile Include="Converters\DishesColorConvert.cs" />
     <Page Include="MainWindow.xaml">
@@ -77,54 +128,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DB\Category.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Client.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\CookingStage.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
     <Compile Include="DB\DBConnection.cs" />
-    <Compile Include="DB\Dish.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Ingredient.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\IngredientOfStage.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model5.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model5.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model5.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Model5.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model5.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Order.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\OrderedDish.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
     <Compile Include="DB\Partials\Dish.cs" />
     <Compile Include="DB\Partials\Ingridient.cs" />
-    <Compile Include="DB\sysdiagrams.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DB\Unit.cs">
-      <DependentUpon>Model5.tt</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -169,12 +175,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="DB\Model5.edmx">
+    <EntityDeploy Include="DB\Model6.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model5.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model6.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DB\Model5.edmx.diagram">
-      <DependentUpon>Model5.edmx</DependentUpon>
+    <None Include="DB\Model6.edmx.diagram">
+      <DependentUpon>Model6.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -212,17 +218,19 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\Model5.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model5.edmx</DependentUpon>
-      <LastGenOutput>Model5.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DB\Model5.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model5.edmx</DependentUpon>
-      <LastGenOutput>Model5.cs</LastGenOutput>
-    </Content>
     <Resource Include="Images\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB\Model6.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model6.edmx</DependentUpon>
+      <LastGenOutput>Model6.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB\Model6.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model6.edmx</DependentUpon>
+      <LastGenOutput>Model6.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

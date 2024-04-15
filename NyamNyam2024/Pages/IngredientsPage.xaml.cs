@@ -26,6 +26,8 @@ namespace NyamNyam2024.Pages
         {
             InitializeComponent();
             ingridients = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
+            Refresh();
+
             this.DataContext = this;
         }
 
@@ -56,6 +58,11 @@ namespace NyamNyam2024.Pages
         private void Refresh()
         {
             ingridientsLV.ItemsSource = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
+        }
+
+        private void countIngredientTbx_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            DBConnection.nnEntities.SaveChanges();
         }
     }
 }

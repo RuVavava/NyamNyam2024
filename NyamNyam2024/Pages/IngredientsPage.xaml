@@ -95,7 +95,7 @@
                                     </Hyperlink>
                                 </TextBlock>
 
-                                <TextBox x:Name="countIngredientTbx" 
+                                <TextBox x:Name="countIngredientTbx" TextChanged="countIngredientTbx_TextChanged"
                                          Text="{Binding AvailableCount}"  Style="{StaticResource ResourceKey=TextBox}"   
                                          FontSize="25"
                                          VerticalAlignment="Center" HorizontalContentAlignment="Center"
