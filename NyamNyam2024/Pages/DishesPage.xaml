@@ -108,7 +108,7 @@
                   Grid.Row="3" Grid.RowSpan="1" 
                   Width="1530" Height="710"
                   HorizontalAlignment="Center" VerticalAlignment="Top"
-                  ItemsSource="{Binding dishes}">
+                  ItemsSource="{Binding dishes}" Cursor="">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <UniformGrid Columns="3"/>
@@ -127,7 +127,9 @@
                             <Image Width="900" Height="450">
                                 <Image.Source>
                                     <FormatConvertedBitmap Source="{Binding Image}"
-                                                           DestinationFormat="{Binding ., Converter={StaticResource ImageKey}}"></FormatConvertedBitmap>
+                                                           DestinationFormat="{Binding ., Converter={StaticResource ImageKey}}">
+                                        
+                                    </FormatConvertedBitmap>
                                 </Image.Source>
                             </Image>
 
@@ -155,8 +157,6 @@
                                      <TextBlock Style="{StaticResource TextDishes}" Text="$"/>
                                 </TextBlock>
                             </StackPanel>
-                            
-                            
                         </StackPanel>
                     </Border>
                 </DataTemplate>

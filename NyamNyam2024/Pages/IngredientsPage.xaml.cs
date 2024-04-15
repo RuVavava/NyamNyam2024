@@ -21,12 +21,41 @@ namespace NyamNyam2024.Pages
     /// </summary>
     public partial class IngredientsPage : Page
     {
-        public static List<Ingredient> ingr { get; set; }
+        public static List<Ingredient> ingridients { get; set; }
         public IngredientsPage()
         {
             InitializeComponent();
-            ingr = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
+            ingridients = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
             this.DataContext = this;
+        }
+
+        private void PlusBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var ingridient = (sender as Button).DataContext as Ingredient;
+
+            if (ingridient.AvailableCount == 99)
+                return;
+            ingridient.AvailableCount += 1;
+            DBConnection.nnEntities.SaveChanges();
+            Refresh();
+            NavigationService.Navigate(new IngredientsPage());
+        }
+
+        private void MinusBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var ingridient = (sender as Button).DataContext as Ingredient;
+
+            if (ingridient.AvailableCount == 1)
+                return;
+            ingridient.AvailableCount -= 1;
+            DBConnection.nnEntities.SaveChanges();
+            Refresh();
+            NavigationService.Navigate(new IngredientsPage());
+        }
+
+        private void Refresh()
+        {
+            ingridientsLV.ItemsSource = new List<Ingredient>(DBConnection.nnEntities.Ingredient.ToList());
         }
     }
 }

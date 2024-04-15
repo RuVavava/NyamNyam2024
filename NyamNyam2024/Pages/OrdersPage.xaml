@@ -10,43 +10,5 @@
 
     <Grid>
 
-
-        <StackPanel Orientation="Vertical" 
-                                    Width="450" Height="325"                                   
-                                    Cursor="Hand">
-            <Image Source="{Binding Image}" Width="120" Height="120" Margin="0 5 0 0">
-
-            </Image>
-
-            <StackPanel  Width="450" Height="100" Margin="0 45 0 0">
-                <StackPanel.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.5"/>
-                </StackPanel.Background>
-
-                <TextBlock Text="{Binding Name}" Style="{StaticResource TextDishes}"
-                                       TextWrapping="Wrap"
-                                       TextAlignment="Center" HorizontalAlignment="Center"/>
-            </StackPanel>
-
-
-            <StackPanel  Width="450" Height="50">
-                <StackPanel.Background>
-                    <SolidColorBrush Color="Black" Opacity="0.5"/>
-                </StackPanel.Background>
-                <TextBlock Style="{StaticResource TextDishes}"
-                                      TextWrapping="Wrap"
-
-                                      TextAlignment="Center"
-                                      HorizontalAlignment="Center">
-                                     <TextBlock Style="{StaticResource TextDishes}" Text="1 portion = "/>
-                                     <TextBlock Style="{StaticResource TextDishes}" Text="{Binding FinalPriceInDollar}"/>
-                                     <TextBlock Style="{StaticResource TextDishes}" Text="$"/>
-                                </TextBlock>
-            </StackPanel>
-
-
-        </StackPanel>
-
-
     </Grid>
 </Page>

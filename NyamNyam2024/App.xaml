@@ -43,5 +43,19 @@
             <Setter Property="Foreground" Value="Black"/>
         </Style>
 
+        <Style x:Key="TextIngridientsName" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style x:Key="ButtonMinPl" TargetType="Button">
+            <Setter Property="Width" Value="35"/>
+            <Setter Property="Height" Value="37"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="25"/>
+        </Style>
+
     </Application.Resources>
 </Application>
