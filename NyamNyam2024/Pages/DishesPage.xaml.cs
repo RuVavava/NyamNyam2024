@@ -137,5 +137,14 @@ namespace NyamNyam2024.Pages
             priceslvalue.Text = $"{Math.Round(priceSlider.Value, 2)} $";
             dishesLV.ItemsSource = dishes;
         }
+
+        private void dishesLV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dishesLV.SelectedItem is Dish dish)
+            {
+                dishesLV.SelectedItem = null;
+                NavigationService.Navigate(new RecipeDishPage(dish));
+            }
+        }
     }
 }

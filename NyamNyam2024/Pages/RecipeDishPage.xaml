@@ -1,0 +1,139 @@
+﻿<Page x:Class="NyamNyam2024.Pages.RecipeDishPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:converters ="clr-namespace:NyamNyam2024.Converters"
+      xmlns:local="clr-namespace:NyamNyam2024.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="RecipeDishPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="600"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="810"/>
+            <ColumnDefinition Width="810"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Background="#fed7c1"
+                Grid.Column="0" Grid.ColumnSpan="3"
+                CornerRadius="0 0 60 0"/>
+
+        <TextBlock Style="{StaticResource Headings}"
+            Grid.Column="1" Grid.Row="0"
+            Margin="40 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+            Recipe for
+        </TextBlock>
+
+        <TextBlock Style="{StaticResource Headings}" x:Name="nameDishesTB"
+            Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"
+            Margin="460 0 0 10" TextWrapping="Wrap" FontSize="45"
+            VerticalAlignment="Bottom" HorizontalAlignment="Left">
+        </TextBlock>
+
+
+        <TextBlock Style="{StaticResource Text}"
+            Grid.Column="1" Grid.Row="1" Grid.RowSpan="1"
+            Margin="40 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+            Category:
+        </TextBlock>
+
+        <TextBlock Style="{StaticResource Text}" x:Name="nameCategoryDishTB"
+            Grid.Column="1" Grid.Row="1" Grid.RowSpan="1"
+            Margin="225 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+        </TextBlock>
+
+
+        <TextBlock Style="{StaticResource Text}"
+            Grid.Column="1" Grid.Row="2" Grid.RowSpan="1"
+            Margin="40 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+            Cooking time:
+        </TextBlock>
+
+        <TextBlock Style="{StaticResource Text}" x:Name="cookingTimeDishTB"
+            Grid.Column="1" Grid.Row="2" Grid.RowSpan="1"
+            Margin="280 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+        </TextBlock>
+        
+
+        <TextBlock Style="{StaticResource Text}"
+            Grid.Column="1" Grid.Row="3" Grid.RowSpan="1"
+            Margin="40 20 0 0"
+            VerticalAlignment="Top" HorizontalAlignment="Left">         
+            Short description:
+        </TextBlock>
+
+        <TextBlock Style="{StaticResource Text}" x:Name="shortdescrDishTB"
+            Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="2"
+            Margin="355 20 0 0" TextWrapping="Wrap" FontSize="22" Width="1200"
+            VerticalAlignment="Top" HorizontalAlignment="Left"> 
+        </TextBlock>
+        
+
+        <TextBlock Style="{StaticResource Text}"
+            Grid.Column="2" Grid.Row="1" Grid.RowSpan="1"
+            Margin="40 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+            Servings:
+        </TextBlock>
+
+        <Button Style="{StaticResource ButtonMinPl}" Content="+" 
+             Grid.Column="2" Grid.Row="1" Margin="170 0 0 0"
+             x:Name="PlusBTN"
+             VerticalContentAlignment="Top" HorizontalContentAlignment="Center"/>
+
+
+        <Button Style="{StaticResource ButtonMinPl}" Content="-" 
+                Grid.Column="2" Grid.Row="1" Margin="-300 0 0 0"
+                x:Name="MinusBTN" 
+                VerticalContentAlignment="Top" HorizontalContentAlignment="Center"/>
+
+        <TextBox Style="{StaticResource TextBox}" x:Name="servingscountTB"
+            Grid.Column="2" Grid.Row="1" Grid.RowSpan="1"
+            Margin="300 0 0 0" Width="150" Height="45" FontSize="30"
+            VerticalAlignment="Center" HorizontalAlignment="Left" HorizontalContentAlignment="Center"/>
+
+
+
+        <TextBlock Style="{StaticResource Text}"
+            Grid.Column="2" Grid.Row="2" Grid.RowSpan="1"
+            Margin="40 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+            Total cost:
+        </TextBlock>
+
+        <TextBlock Style="{StaticResource Text}" x:Name="totalCostDishsTB"
+            Grid.Column="2" Grid.Row="2" Grid.RowSpan="1"
+            Margin="240 0 0 0"
+            VerticalAlignment="Center" HorizontalAlignment="Left">         
+        </TextBlock>
+
+        <TextBlock Style="{StaticResource Text}"
+            Grid.Column="1" Grid.Row="4" Grid.RowSpan="1"
+            VerticalAlignment="Center" HorizontalAlignment="Center">         
+            Ingredients:
+        </TextBlock>
+
+        <TextBlock Style="{StaticResource Text}"
+            Grid.Column="2" Grid.Row="4" Grid.RowSpan="1"
+            VerticalAlignment="Center" HorizontalAlignment="Center">         
+            Cooking Process:
+        </TextBlock>
+    </Grid>
+</Page>

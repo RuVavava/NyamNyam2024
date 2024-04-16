@@ -121,6 +121,9 @@
     <Compile Include="DB\Unit.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Pages\RecipeDishPage.xaml.cs">
+      <DependentUpon>RecipeDishPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Service\CheckAvailbleOfDish.cs" />
     <Compile Include="Converters\DishesColorConvert.cs" />
     <Page Include="MainWindow.xaml">
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\OrdersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RecipeDishPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
