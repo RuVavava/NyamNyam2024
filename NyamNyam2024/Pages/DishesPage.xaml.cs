@@ -30,9 +30,12 @@ namespace NyamNyam2024.Pages
             CheckAvailbleOfDish.IsCheck();
 
             dishes = new List<Dish>(DBConnection.nnEntities.Dish.ToList());
+            dishesLV.ItemsSource = dishes;
+
             categories = new List<Category>(DBConnection.nnEntities.Category.ToList());
             categories.Insert(0, new Category() { Name = "All catigories"});
             categoriesCB.SelectedIndex = 0;
+
             this.DataContext = this;
         }
 
@@ -138,7 +141,7 @@ namespace NyamNyam2024.Pages
             dishesLV.ItemsSource = dishes;
         }
 
-        private void dishesLV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void dishesLV_SelectionChanged(object sender, SelectionChangedEventArgs e) //Переход на 
         {
             if (dishesLV.SelectedItem is Dish dish)
             {

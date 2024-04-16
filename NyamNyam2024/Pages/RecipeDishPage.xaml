@@ -8,6 +8,9 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="RecipeDishPage">
+    <Page.Resources>
+        <converters:RadioBtnColorForIngredientsConvert x:Key="RadioBtnColorForIngredientsConvert"/>
+    </Page.Resources>
 
     <Grid>
         <Grid.RowDefinitions>
@@ -16,8 +19,7 @@
             <RowDefinition Height="70"/>
             <RowDefinition Height="140"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="600"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="650"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -39,8 +41,8 @@
 
         <TextBlock Style="{StaticResource Headings}" x:Name="nameDishesTB"
             Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"
-            Margin="460 0 0 10" TextWrapping="Wrap" FontSize="45"
-            VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            Margin="460 0 0 0" TextWrapping="Wrap"
+            VerticalAlignment="Center" HorizontalAlignment="Left">
         </TextBlock>
 
 
@@ -81,7 +83,7 @@
 
         <TextBlock Style="{StaticResource Text}" x:Name="shortdescrDishTB"
             Grid.Column="1" Grid.Row="3" Grid.RowSpan="1" Grid.ColumnSpan="2"
-            Margin="355 20 0 0" TextWrapping="Wrap" FontSize="22" Width="1200"
+            Margin="355 20 0 0" TextWrapping="Wrap" Width="1200"
             VerticalAlignment="Top" HorizontalAlignment="Left"> 
         </TextBlock>
         
@@ -96,13 +98,13 @@
         <Button Style="{StaticResource ButtonMinPl}" Content="+" 
              Grid.Column="2" Grid.Row="1" Margin="170 0 0 0"
              x:Name="PlusBTN"
-             VerticalContentAlignment="Top" HorizontalContentAlignment="Center"/>
+             VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Click="PlusBTN_Click"/>
 
 
         <Button Style="{StaticResource ButtonMinPl}" Content="-" 
                 Grid.Column="2" Grid.Row="1" Margin="-300 0 0 0"
                 x:Name="MinusBTN" 
-                VerticalContentAlignment="Top" HorizontalContentAlignment="Center"/>
+                VerticalContentAlignment="Top" HorizontalContentAlignment="Center" Click="MinusBTN_Click"/>
 
         <TextBox Style="{StaticResource TextBox}" x:Name="servingscountTB"
             Grid.Column="2" Grid.Row="1" Grid.RowSpan="1"
@@ -130,10 +132,80 @@
             Ingredients:
         </TextBlock>
 
+
+        <ListView x:Name="RecipeDishesLv"
+                  FontFamily="Comic Sans MS" FontSize="25"
+                  Grid.Row="5"  Grid.Column="1"
+                  Height="450" Width="750" Margin ="0 0 0 170"
+                  HorizontalAlignment="Center"     
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header=" " Width="56">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Border Background="{Binding ., Converter={StaticResource RadioBtnColorForIngredientsConvert}}"
+                                        CornerRadius="20" BorderThickness="1" BorderBrush="Black"
+                                            Name="Border"
+                                            Width="15" Height="15" >
+                                    </Border>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Name" Width="255">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Ingredient.Name}"
+                                        TextWrapping="Wrap" Height="35" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Quantity" Width="140">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding TotalQuantity}"
+                                        Height="35" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Unit" Width="152">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Ingredient.Unit.Name}"
+                                        Height="35"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Cost" Width="140">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding TotalCost}"
+                                        Height="35"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
         <TextBlock Style="{StaticResource Text}"
             Grid.Column="2" Grid.Row="4" Grid.RowSpan="1"
             VerticalAlignment="Center" HorizontalAlignment="Center">         
             Cooking Process:
         </TextBlock>
+
+        <Button Style="{StaticResource ButtonMinPl}" Content="Back" Click="goBacktoDishesBTN_Click"
+                Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"
+                Width="150" Height="45" Margin="0 0 0 110"
+                x:Name="goBacktoDishesBTN" 
+                VerticalContentAlignment="Center" VerticalAlignment="Bottom" 
+                HorizontalContentAlignment="Center" HorizontalAlignment="Center" />
     </Grid>
 </Page>
