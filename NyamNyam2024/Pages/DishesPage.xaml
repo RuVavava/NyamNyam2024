@@ -96,12 +96,18 @@
             Price:
         </TextBlock>
 
-        <Slider
+        <TextBlock Style="{StaticResource Text}" x:Name="priceslvalue" Text="0 $"
+            Grid.Column="2" Grid.Row="2" FontSize="30"
+            Margin="0 0 50 0"
+            VerticalAlignment="Center" HorizontalAlignment="Right">         
+        </TextBlock>
+
+        <Slider x:Name="priceSlider"
             Grid.Column="2" Grid.Row="2"
             Width="450" Height="20"
             VerticalContentAlignment="Center"
-            Minimum="0" Maximum="100" Value="0"
-            IsSelectionRangeEnabled="True" IsMoveToPointEnabled="True"/>
+            Minimum="0" Maximum="50" Value="0"
+            IsSelectionRangeEnabled="True" IsMoveToPointEnabled="True" ValueChanged="Slider_ValueChanged"/>
 
         <ListView x:Name="dishesLV" 
                   Grid.Column="1" Grid.ColumnSpan="2" 
