@@ -126,7 +126,7 @@
             VerticalAlignment="Center" HorizontalAlignment="Left">         
         </TextBlock>
 
-        <TextBlock Style="{StaticResource Text}"
+        <TextBlock Style="{StaticResource Text}" FontSize="25"
             Grid.Column="1" Grid.Row="4" Grid.RowSpan="1"
             VerticalAlignment="Center" HorizontalAlignment="Center">         
             Ingredients:
@@ -195,11 +195,35 @@
         </ListView>
 
 
-        <TextBlock Style="{StaticResource Text}"
+        <TextBlock Style="{StaticResource Text}" FontSize="25"
             Grid.Column="2" Grid.Row="4" Grid.RowSpan="1"
             VerticalAlignment="Center" HorizontalAlignment="Center">         
             Cooking Process:
         </TextBlock>
+
+        <ListView x:Name="ResLv" ItemsSource="{Binding cookingStages}"
+                  FontFamily="Comic Sans MS" FontSize="25"
+                  Grid.Row="5"  Grid.Column="2"
+                  Height="450" Width="750" Margin ="0 0 0 170"
+                  HorizontalAlignment="Center"     
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header=" ">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Steps}"
+                                               TextWrapping="Wrap">
+                                    </TextBlock>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
 
         <Button Style="{StaticResource ButtonMinPl}" Content="Back" Click="goBacktoDishesBTN_Click"
                 Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2"

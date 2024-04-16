@@ -124,17 +124,6 @@ namespace NyamNyam2024.Pages
 
             }
 
-            //ЧЕКБОКС
-
-            if (IngredientsChB.IsChecked == true)
-            {
-                dishesLV.ItemsSource = DBConnection.nnEntities.Dish.Where(x => x.Availble == true).ToList();
-            }
-            else
-            {
-                dishesLV.ItemsSource = dishes;
-            }
-
             //СЛАЙДЕР
             dishes = dishes.Where(x => x.FinalPriceInDollar <= priceSlider.Value).ToList();
             priceslvalue.Text = $"{Math.Round(priceSlider.Value, 2)} $";

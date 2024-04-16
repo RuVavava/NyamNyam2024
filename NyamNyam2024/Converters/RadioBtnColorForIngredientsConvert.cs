@@ -14,7 +14,7 @@ namespace NyamNyam2024.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             IngredientOfStage stage = (IngredientOfStage)value;
-            return stage.ColorRadioButtom ? "Green" : "Red";
+            return stage.ColorRadioButtom ? "#7CFC00" : "#8B0000";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
